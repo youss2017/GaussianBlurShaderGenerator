@@ -151,7 +151,7 @@ public class Main {
                 "};\n" +
                 "\n" +
                 "#define KERNEL_SIZE " + options[option] + "\n" +
-                "out vec2 TexCoord[KERNEL_SIZE * 2 + 1];\n" +
+                "out vec2 TexCoord[KERNEL_SIZE];\n" +
                 "uniform float "
                 ;
         if(Direction == 0) {
@@ -199,7 +199,7 @@ public class Main {
                 "    vec4(1, 1, 1, 1),\n" +
                 "    vec4(1, -1, 1, 0)\n" +
                 "};\n" +
-                "layout (location = 0) out vec2 TexCoord[KERNEL_SIZE * 2 + 1];\n" +
+                "layout (location = 0) out vec2 TexCoord[KERNEL_SIZE];\n" +
                 "layout (push_constant) uniform constants\n" +
                 "{\n"
                 ;
@@ -244,7 +244,7 @@ public class Main {
         String code = "#version 330 core\n" +
                 "#define KERNEL_SIZE " + options[option] + "\n" +
                 "\n" +
-                "in vec2 TexCoord[KERNEL_SIZE * 2 + 1];\n" +
+                "in vec2 TexCoord[KERNEL_SIZE];\n" +
                 "uniform sampler2D TargetTexture;\n" +
                 "out vec4 FragColor;\n" +
                 "\n" +
@@ -263,7 +263,7 @@ public class Main {
     {
         String code = "#version 450 core\n" +
                 "#define KERNEL_SIZE " + options[option] + "\n" +
-                "layout (location = 0) in vec2 TexCoord[KERNEL_SIZE * 2 + 1];\n" +
+                "layout (location = 0) in vec2 TexCoord[KERNEL_SIZE];\n" +
                 "layout(set = 0, binding = 0) uniform sampler2D TargetTexture;\n" +
                 "layout (location = 0) out vec4 FragColor;\n" +
                 "\n" +
