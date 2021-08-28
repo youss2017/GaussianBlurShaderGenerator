@@ -72,6 +72,7 @@ public class Main {
 
     static boolean GetFragmentShader() {
         System.out.println("Generate Fragment Shader");
+        System.out.println("(NOTE) If both horizontal and vertical gaussian blur pass use the same kernel size, then you can use the same fragment shader for both!");
         System.out.println("[0] YES");
         System.out.println("[1] NO");
         System.out.print("Generate: ");
