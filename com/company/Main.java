@@ -179,7 +179,7 @@ public class Main {
         code += "\n" +
                 "    for(int i = -KERNEL_SIZE; i <= KERNEL_SIZE; i++)\n" +
                 "    {\n" +
-                "        TexCoord[i + KERNEL_SIZE] = CenteredTextureCoord + vec2(0.0, PixelSize * i);\n" +
+                "        TexCoord[i + KERNEL_SIZE/2] = CenteredTextureCoord + vec2(0.0, PixelSize * i);\n" +
                 "    }\n" +
                 "}\n";
         return code;
@@ -223,7 +223,7 @@ public class Main {
                     "\n" +
                     "    for(int i = -KERNEL_SIZE/2; i <= KERNEL_SIZE/2; i++)\n" +
                     "    {\n" +
-                    "        TexCoord[i + KERNEL_SIZE] = CenteredTextureCoord + vec2(PixelSize * i, 0.0);\n" +
+                    "        TexCoord[i + KERNEL_SIZE/2] = CenteredTextureCoord + vec2(PixelSize * i, 0.0);\n" +
                     "    }\n" +
                     "}";
         } else {
@@ -233,7 +233,7 @@ public class Main {
                     "\n" +
                     "    for(int i = -KERNEL_SIZE/2; i <= KERNEL_SIZE/2; i++)\n" +
                     "    {\n" +
-                    "        TexCoord[i + KERNEL_SIZE] = CenteredTextureCoord + vec2(0.0, PixelSize * i);\n" +
+                    "        TexCoord[i + KERNEL_SIZE/2] = CenteredTextureCoord + vec2(0.0, PixelSize * i);\n" +
                     "    }\n" +
                     "}";
         }
